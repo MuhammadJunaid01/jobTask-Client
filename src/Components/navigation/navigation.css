@@ -1,0 +1,22 @@
+.navigationContainer {
+  background-color: #0c1e4c;
+}
+.brandName {
+  font-size: 35px;
+  font-weight: 600;
+  color: white;
+  overflow: hidden;
+  transition: 3s ease-in-out;
+}
+.brandName:hover {
+  transform: scale(1.5);
+}
+.linkNav {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  margin-right: 20px;
+}
+.linkNav:hover {
+  color: white;
+}

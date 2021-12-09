@@ -1,0 +1,11 @@
+.headerContainer {
+  background-color: antiquewhite;
+}
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+}
+.followIconSocial i {
+  margin-right: 10px;
+  cursor: pointer;
+}

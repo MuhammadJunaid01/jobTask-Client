@@ -1,0 +1,46 @@
+.blogsContainer {
+  padding: 50px 0px;
+  background-color: #0c1e4c;
+  color: white;
+}
+
+.nestedDetail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  padding: 10px;
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  align-items: center;
+}
+.nestedImage {
+  transition: 3s ease-in-out;
+}
+.nestedDetail:hover .nestedImage {
+  transform: scale(1.2);
+}
+
+.nestedImage img {
+  height: 60px;
+  width: 60;
+}
+.nestedLink {
+  text-align: center;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+}
+.nestedLink:hover {
+  color: white;
+}
+
+@media (min-width: 300px) and (max-width: 640px) {
+  .blogsContainer {
+    padding: 10px;
+  }
+}
