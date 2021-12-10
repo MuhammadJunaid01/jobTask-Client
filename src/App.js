@@ -10,6 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navigation from "./Components/navigation/Navigation";
 import Home from "./Components/home/Home";
 import Login from "./Components/login/Login";
+import Regester from "./Components/regester/Regester";
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/regester">
+            <Regester />
           </Route>
         </Switch>
       </Router>

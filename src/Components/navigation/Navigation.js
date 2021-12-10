@@ -35,6 +35,9 @@ const Navigation = () => {
               <Link className="linkNav" to="/contact">
                 CONTACT
               </Link>
+              <Link className="linkNav" to="/dashboard">
+                DASHBOARD
+              </Link>
               {user?.email ? (
                 <Link onClick={logOut} className="linkNav" to="/login">
                   LOGOUT

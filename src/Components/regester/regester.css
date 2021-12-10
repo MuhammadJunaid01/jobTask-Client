@@ -1,0 +1,15 @@
+.regesterContainer {
+  background-color: #0c1e4c67;
+  padding: 70px;
+}
+.regesterForm {
+  width: 70%;
+  margin: 0 auto;
+}
+.regesterFeild {
+  display: block;
+  width: 50%;
+
+  margin-top: 3px;
+  outline: none;
+}

@@ -6,6 +6,7 @@ import loginImage from "../../images/logo/login.png";
 import UseFirebase from "./../../hooks/usefirebase/UseFirebase";
 import { useLocation } from "react-router";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 const Login = () => {
   const { googleSign, user, setUser, setError, error, loginWithEmailAndPass } =
     UseFirebase();
@@ -20,24 +21,16 @@ const Login = () => {
     reset();
   };
 
-  const loginWithGoogle = () => {
-    googleSign()
-      .then((result) => {
-        const user = result.user;
-        setUser(user);
-        history.push(redirect);
-      })
-      .catch((error) => {
-        const errorMessage = error.message;
-        setError(errorMessage);
-      });
-  };
+  // const loginWithGoogle = () => {
+  //   googleSign()
+
+  // };
   console.log("user", user);
   return (
     <div className="loginContainer">
       <Container>
         <Row className="RowContainer">
-          <Col sm={12} md={7} lg={7}>
+          <Col sm={12} md={5} lg={7}>
             <img src={loginImage} alt="" />
           </Col>
           <Col sm={12} md={5} lg={5}>
@@ -60,7 +53,7 @@ const Login = () => {
                 <input type="submit" />
               </form>
               <Button
-                onClick={loginWithGoogle}
+                onClick={googleSign}
                 style={{
                   marginTop: "10px",
                 }}
@@ -69,6 +62,10 @@ const Login = () => {
                 <i className="fab fa-google"></i>
                 Login With Google
               </Button>
+              <br />
+              <Link style={{ color: "white" }} to="/regester">
+                are You New User?
+              </Link>
             </div>
             <h5>{error}</h5>
           </Col>

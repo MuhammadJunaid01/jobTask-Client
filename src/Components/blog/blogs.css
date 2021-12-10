@@ -1,7 +1,8 @@
 .blogsContainer {
   padding: 50px 0px;
-  background-color: #0c1e4c;
-  color: white;
+  /* background-color: #0c1e4/c; */
+  background-color: azure;
+  /* color: white; */
 }
 
 .nestedDetail {
@@ -9,11 +10,12 @@
   justify-content: space-between;
   margin-bottom: 20px;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   padding: 10px;
   border-top-left-radius: 12px;
   border-bottom-right-radius: 12px;
   align-items: center;
+  background-color: white;
 }
 .nestedImage {
   transition: 3s ease-in-out;
@@ -31,12 +33,12 @@
   text-decoration: none;
   margin-top: 3px;
   display: block;
-  color: white;
+  color: black;
   font-size: 30px;
   font-weight: 500;
 }
 .nestedLink:hover {
-  color: white;
+  color: black;
 }
 
 @media (min-width: 300px) and (max-width: 640px) {
