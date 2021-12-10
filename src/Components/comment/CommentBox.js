@@ -14,7 +14,7 @@ const CommentBox = () => {
   const [comment, setComment] = useState();
   const { user } = UseFirebase();
   useEffect(() => {
-    fetch(`http://localhost:5000/jsPost/${id}`)
+    fetch(`https://young-falls-28843.herokuapp.com/jsPost/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setDetail(data);
@@ -39,7 +39,7 @@ const CommentBox = () => {
       name,
       comment,
     };
-    fetch("http://localhost:5000/commentPostJs", {
+    fetch("https://young-falls-28843.herokuapp.com/commentPostJs", {
       headers: {
         "Content-Type": "application/json",
       },
