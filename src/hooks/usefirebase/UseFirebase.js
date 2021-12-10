@@ -112,7 +112,7 @@ const UseFirebase = () => {
   const saveUser = (email, displayName, method) => {
     console.log("called ");
     const user = { email, displayName };
-    fetch("http://localhost:5000/users", {
+    fetch("https://young-falls-28843.herokuapp.com/users", {
       method: method,
       headers: {
         "content-type": "application/json",
@@ -123,7 +123,7 @@ const UseFirebase = () => {
   const googleUserSave = (email, displayName) => {
     console.log("called google");
     const user = { email, displayName };
-    fetch("http://localhost:5000/users", {
+    fetch("https://young-falls-28843.herokuapp.com/users", {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -132,7 +132,7 @@ const UseFirebase = () => {
     }).then();
   };
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${user.email}`)
+    fetch(`https://young-falls-28843.herokuapp.com/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setAdmin(data.admin);
