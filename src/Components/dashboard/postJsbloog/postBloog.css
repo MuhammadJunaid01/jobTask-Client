@@ -1,0 +1,16 @@
+.postBloogInfo {
+  margin: 20px 0px;
+  font-weight: 600;
+}
+.BloogPostInfutFeild {
+  display: block;
+  width: 60%;
+  outline: none;
+  margin-top: 5px;
+}
+
+@media (min-width: 300px) and (max-width: 700px) {
+  .BloogPostInfutFeild {
+    width: 100%;
+  }
+}

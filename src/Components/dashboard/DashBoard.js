@@ -1,37 +1,69 @@
 import React, { useState } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "./dashboard.css";
+import { Link } from "react-router-dom";
+import { useRouteMatch, Switch, Route } from "react-router-dom";
+import PostJsBloog from "./postJsbloog/PostJsBloog";
+import MakeAnAdmin from "./makeAnAdmin/MakeAnAdmin";
+import PostReactBloog from "./postReactBloog/PostReactBloog";
+import PostContextBloog from "./postContextBloog/PostContextBloog";
+import PostHooksBloog from "./postHooksBloogs/PostHooksBloog";
+import ControlAllBloog from "./controlAllBloog/ControlAllBloog";
 const DashBoard = () => {
-  const [email, setEmail] = useState("");
-  const handleAdminSubmit = (e) => {
-    e.preventDefault();
-    const user = { email };
-    fetch("http://localhost:5000/users/admin", {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(user),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.modifiedCount) {
-          console.log("admin success", data);
-          setEmail("");
-        }
-      });
-  };
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-  };
+  let { path, url } = useRouteMatch();
+
   return (
-    <div>
+    <div className="dashBoardContainer">
       <Container>
-        <h1>make admin</h1>
-        <form onSubmit={handleAdminSubmit}>
-          <input onBlur={handleEmail} type="email" required />
-          <input type="submit" value="Make Admin" />
-        </form>
+        <Row>
+          <Col sm={12} md={3} lg={3}>
+            <div className="dashboard">
+              <Link className="dashBoardLink" to={`${url}/makeAdmin`}>
+                Make Admin
+              </Link>
+              <Link className="dashBoardLink" to={`${url}/javascriptBloog`}>
+                Post Javascript Bloog
+              </Link>
+              <Link className="dashBoardLink" to={`${url}/reactBloog`}>
+                Post React Bloog
+              </Link>
+              <Link className="dashBoardLink" to={`${url}/contextBloog`}>
+                Post Context Bloog
+              </Link>
+              <Link className="dashBoardLink" to={`${url}/hooksBloog`}>
+                Post Hooks Bloog
+              </Link>
+              <Link className="dashBoardLink" to={`${url}/controlAllBloog`}>
+                Control All Bloog
+              </Link>
+            </div>
+          </Col>
+          <Col sm={12} md={9} lg={9}>
+            <Switch>
+              <Route exact path={path}>
+                <PostJsBloog />
+              </Route>
+              <Route path={`${path}/javascriptBloog`}>
+                <PostJsBloog />
+              </Route>
+              <Route path={`${path}/reactBloog`}>
+                <PostReactBloog />
+              </Route>
+              <Route path={`${path}/hooksBloog`}>
+                <PostHooksBloog />
+              </Route>
+              <Route path={`${path}/contextBloog`}>
+                <PostContextBloog />
+              </Route>
+              <Route path={`${path}/makeAdmin`}>
+                <MakeAnAdmin />
+              </Route>
+              <Route path={`${path}/controlAllBloog`}>
+                <ControlAllBloog />
+              </Route>
+            </Switch>
+          </Col>
+        </Row>
       </Container>
     </div>
   );

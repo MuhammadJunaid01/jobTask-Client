@@ -37,3 +37,14 @@
   font-size: 60px;
   font-weight: 600;
 }
+
+@media (min-width: 300px) and (max-width: 700px) {
+  .typicalContent h1 {
+    font-size: 33px;
+  }
+  .typicalContent {
+    width: 100%;
+    padding: 0px;
+    margin: 40px;
+  }
+}

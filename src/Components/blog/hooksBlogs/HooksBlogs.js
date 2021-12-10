@@ -36,7 +36,7 @@ const HooksBlogs = () => {
       <Row className="gy-3">
         {hooksBlogs.map((hooksBlog) => (
           <Col key={hooksBlog?._id} sm={12} md={4} lg={4}>
-            <Card style={{ width: "18rem" }}>
+            <Card>
               <Card.Img variant="top" src={hooksBlog?.image} />
               <Card.Body>
                 <Card.Title style={{ color: "black" }}>

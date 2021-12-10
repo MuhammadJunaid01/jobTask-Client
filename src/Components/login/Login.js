@@ -31,7 +31,7 @@ const Login = () => {
       <Container>
         <Row className="RowContainer">
           <Col sm={12} md={5} lg={7}>
-            <img src={loginImage} alt="" />
+            <img className="loginImage" src={loginImage} alt="" />
           </Col>
           <Col sm={12} md={5} lg={5}>
             <div className="loginWithEmail">

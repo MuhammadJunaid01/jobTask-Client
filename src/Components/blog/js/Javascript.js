@@ -35,11 +35,15 @@ const Javascript = () => {
       <div className="BlogsInfo">
         <h2>Learn Javascript With ARK</h2>
       </div>
-      <Row className="gy-3">
+      <Row className="g-3">
         {jsBlogs.map((jsblog) => (
           <Col key={jsblog?._id} sm={12} md={4} lg={4}>
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={jsblog?.image} />
+            <Card>
+              <Card.Img
+                variant="top"
+                className="jsbloogImage"
+                src={jsblog?.image}
+              />
               <Card.Body>
                 <Card.Title>Card Title</Card.Title>
                 {readMore ? (

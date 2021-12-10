@@ -36,7 +36,7 @@ const BlogsRe = () => {
       <Row className="gy-3">
         {reactBlogs.map((reactBlog) => (
           <Col key={reactBlog?._id} sm={12} md={4} lg={4}>
-            <Card style={{ width: "18rem" }}>
+            <Card>
               <Card.Img variant="top" src={reactBlog?.image} />
               <Card.Body>
                 <Card.Title>Card Title</Card.Title>

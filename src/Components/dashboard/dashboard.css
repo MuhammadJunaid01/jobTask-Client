@@ -1,0 +1,21 @@
+.dashBoardContainer {
+  background-image: url(../../images/logo/dashboard.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 530px;
+}
+.dashboard {
+  background-color: #403f3e;
+  padding: 20px;
+}
+.dashBoardLink {
+  text-decoration: none;
+  display: block;
+  color: white;
+  font-size: 20px;
+}
+.dashBoardLink:hover {
+  color: white;
+}
