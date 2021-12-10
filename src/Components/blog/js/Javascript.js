@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Col, Row, Spinner, Button, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./js.css";
 const Javascript = () => {
   const [jsBlogs, setJsBlogs] = useState([]);
@@ -61,6 +62,11 @@ const Javascript = () => {
                       <i className="fas fa-chevron-circle-up"></i>
                       <i className="fas fa-chevron-circle-up"></i>
                     </span>
+                    <Link to={`coment/${jsblog?._id}`}>
+                      <span className="commenbox">
+                        <i className="far fa-comment-alt"></i>
+                      </span>
+                    </Link>
                   </Card.Text>
                 )}
               </Card.Body>

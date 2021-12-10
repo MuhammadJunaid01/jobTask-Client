@@ -13,3 +13,9 @@
 .jsbloogImage {
   height: 100px;
 }
+.commenbox {
+  font-size: 30px;
+  display: block;
+  color: orange;
+  cursor: pointer;
+}

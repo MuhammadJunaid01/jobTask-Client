@@ -12,6 +12,7 @@ import Home from "./Components/home/Home";
 import Login from "./Components/login/Login";
 import Regester from "./Components/regester/Regester";
 import DashBoard from "./Components/dashboard/DashBoard";
+import CommentBox from "./Components/comment/CommentBox";
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
           </Route>
           <Route path="/dashboard">
             <DashBoard />
+          </Route>
+          <Route path="/coment/:id">
+            <CommentBox />
           </Route>
         </Switch>
       </Router>

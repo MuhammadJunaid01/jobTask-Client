@@ -1,0 +1,40 @@
+.commentinput {
+  width: 70%;
+  outline: none;
+  padding: 7px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.commentText {
+  width: 70%;
+  padding: 60px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+}
+.formFilled {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 30px;
+  border-radius: 20px;
+  width: 80%;
+}
+.userName {
+  font-size: 30px;
+  font-weight: 600px;
+}
+.commentImage {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.commenterInfo {
+  display: flex;
+  align-items: center;
+}
+.colapseIcon i {
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 16px;
+}
