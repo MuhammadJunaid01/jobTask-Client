@@ -6,7 +6,7 @@ import "./js.css";
 const Javascript = () => {
   const [jsBlogs, setJsBlogs] = useState([]);
   const [loader, setLoader] = useState(true);
-  const [readMore, setReadMore] = useState(false);
+  const [readMore, setReadMore] = useState(true);
   useEffect(() => {
     fetch("http://localhost:5000/jsPost")
       .then((res) => res.json())

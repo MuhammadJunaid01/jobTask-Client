@@ -4,7 +4,7 @@ import { Row, Spinner, Col, Card } from "react-bootstrap";
 const BlogsRe = () => {
   const [reactBlogs, setReactBlogs] = useState([]);
   const [loader, setLoader] = useState(true);
-  const [readMore, setReadMore] = useState(false);
+  const [readMore, setReadMore] = useState(true);
   useEffect(() => {
     fetch("http://localhost:5000/reactPost")
       .then((res) => res.json())

@@ -7,7 +7,7 @@ import { Spinner } from "react-bootstrap";
 const BlogsContext = () => {
   const [contextBlogs, setContextBlogs] = useState([]);
   const [loader, setLoader] = useState(true);
-  const [readMore, setReadMore] = useState(false);
+  const [readMore, setReadMore] = useState(true);
   useEffect(() => {
     fetch("http://localhost:5000/contextPost")
       .then((res) => res.json())

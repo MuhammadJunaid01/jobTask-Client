@@ -4,7 +4,7 @@ import "./hooksBlogs.css";
 const HooksBlogs = () => {
   const [hooksBlogs, setHooksBlogs] = useState([]);
   const [loader, setLoader] = useState(true);
-  const [readMore, setReadMore] = useState(false);
+  const [readMore, setReadMore] = useState(true);
   useEffect(() => {
     fetch("http://localhost:5000/hooksPost")
       .then((res) => res.json())

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./navigation.css";
 import UseFirebase from "./../../hooks/usefirebase/UseFirebase";
 const Navigation = () => {
-  const { user, logOut } = UseFirebase();
+  const { user, logOut, admin } = UseFirebase();
   return (
     <div className="navigationContainer">
       <Navbar expand="lg">
@@ -35,9 +35,11 @@ const Navigation = () => {
               <Link className="linkNav" to="/contact">
                 CONTACT
               </Link>
-              <Link className="linkNav" to="/dashboard">
-                DASHBOARD
-              </Link>
+              {admin && (
+                <Link className="linkNav" to="/dashboard">
+                  DASHBOARD
+                </Link>
+              )}
               {user?.email ? (
                 <Link onClick={logOut} className="linkNav" to="/login">
                   LOGOUT

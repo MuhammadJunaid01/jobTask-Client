@@ -1,8 +1,10 @@
 .blogsContainer {
   padding: 50px 0px;
-  /* background-color: #0c1e4/c; */
-  background-color: azure;
-  /* color: white; */
+  background-image: url(../../images/logo/blog.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .nestedDetail {

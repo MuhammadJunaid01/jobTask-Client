@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import FirebaseAuthentication from "./../firebase/firebaseinit/firebaseinit";
 import { useLocation } from "react-router";
@@ -16,7 +16,7 @@ import {
 FirebaseAuthentication();
 const UseFirebase = () => {
   const [loader, setLoader] = useState(true);
-
+  const [admin, setAdmin] = useState(false);
   const location = useLocation();
   const history = useHistory();
   const redirect = location.state?.from || "/";
@@ -110,7 +110,7 @@ const UseFirebase = () => {
       });
   };
   const saveUser = (email, displayName, method) => {
-    console.log("called google");
+    console.log("called ");
     const user = { email, displayName };
     fetch("http://localhost:5000/users", {
       method: method,
@@ -121,7 +121,7 @@ const UseFirebase = () => {
     }).then();
   };
   const googleUserSave = (email, displayName) => {
-    console.log("called");
+    console.log("called google");
     const user = { email, displayName };
     fetch("http://localhost:5000/users", {
       method: "PUT",
@@ -131,6 +131,13 @@ const UseFirebase = () => {
       body: JSON.stringify(user),
     }).then();
   };
+  useEffect(() => {
+    fetch(`http://localhost:5000/users/${user.email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setAdmin(data.admin);
+      });
+  }, [user.email]);
   return {
     googleSign,
     user,
@@ -140,6 +147,7 @@ const UseFirebase = () => {
     setError,
     loginWithEmailAndPass,
     regesterWithEmail,
+    admin,
   };
 };
 
