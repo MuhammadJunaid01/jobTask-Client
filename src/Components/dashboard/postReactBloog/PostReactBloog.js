@@ -7,7 +7,7 @@ const PostReactBloog = () => {
   const onSubmit = (data) => {
     console.log(data);
 
-    fetch("http://localhost:5000/reactPost", {
+    fetch("https://young-falls-28843.herokuapp.com/reactPost", {
       headers: {
         "Content-Type": "application/json",
       },

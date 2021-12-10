@@ -9,7 +9,7 @@ const BlogsContext = () => {
   const [loader, setLoader] = useState(true);
   const [readMore, setReadMore] = useState(true);
   useEffect(() => {
-    fetch("http://localhost:5000/contextPost")
+    fetch("https://young-falls-28843.herokuapp.com/contextPost")
       .then((res) => res.json())
       .then((data) => {
         setContextBlogs(data);

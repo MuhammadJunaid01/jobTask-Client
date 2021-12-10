@@ -6,7 +6,7 @@ const PostJsBloog = () => {
   const onSubmit = (data) => {
     console.log("js data post", data);
     reset();
-    fetch("http://localhost:5000/jsPost", {
+    fetch("https://young-falls-28843.herokuapp.com/jsPost", {
       headers: {
         "Content-Type": "application/json",
       },

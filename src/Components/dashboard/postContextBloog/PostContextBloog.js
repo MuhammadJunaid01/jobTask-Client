@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 const PostContextBloog = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/contextPost", {
+    fetch("https://young-falls-28843.herokuapp.com/contextPost", {
       headers: {
         "Content-Type": "application/json",
       },
