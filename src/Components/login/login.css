@@ -1,0 +1,16 @@
+.loginContainer {
+}
+
+.loginWithEmail {
+  background-color: #0c1e4c;
+  padding: 20px;
+  margin-top: 50px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.inputFeild {
+  display: block;
+  width: 80%;
+  margin-bottom: 10px;
+  outline: none;
+}

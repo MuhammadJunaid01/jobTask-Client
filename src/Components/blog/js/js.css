@@ -1,4 +1,4 @@
-.jsBlogsInfo {
+.BlogsInfo {
   text-align: center;
 }
 .loader {
@@ -6,4 +6,7 @@
 }
 .loader h1 {
   padding: 20px;
+}
+.readmoreIcon {
+  cursor: pointer;
 }

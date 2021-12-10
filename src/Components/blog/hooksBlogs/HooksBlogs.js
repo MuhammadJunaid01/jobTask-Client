@@ -1,17 +1,15 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
-import { Col, Row, Spinner, Button, Card } from "react-bootstrap";
-import "./js.css";
-const Javascript = () => {
-  const [jsBlogs, setJsBlogs] = useState([]);
+import React, { useEffect, useState } from "react";
+import { Row, Card, Col, Spinner } from "react-bootstrap";
+import "./hooksBlogs.css";
+const HooksBlogs = () => {
+  const [hooksBlogs, setHooksBlogs] = useState([]);
   const [loader, setLoader] = useState(true);
   const [readMore, setReadMore] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:5000/jsPost")
+    fetch("http://localhost:5000/hooksPost")
       .then((res) => res.json())
       .then((data) => {
-        setJsBlogs(data);
+        setHooksBlogs(data);
       })
       .catch((err) => {
         console.log(err);
@@ -33,18 +31,20 @@ const Javascript = () => {
   ) : (
     <div>
       <div className="BlogsInfo">
-        <h2>Learn Javascript With ARK</h2>
+        <h2>Learn Hooks With ARK</h2>
       </div>
       <Row className="gy-3">
-        {jsBlogs.map((jsblog) => (
-          <Col key={jsblog?._id} sm={12} md={4} lg={4}>
+        {hooksBlogs.map((hooksBlog) => (
+          <Col key={hooksBlog?._id} sm={12} md={4} lg={4}>
             <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={jsblog?.image} />
+              <Card.Img variant="top" src={hooksBlog?.image} />
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
+                <Card.Title style={{ color: "black" }}>
+                  {hooksBlog?.name}
+                </Card.Title>
                 {readMore ? (
                   <Card.Text style={{ color: "black" }}>
-                    {jsblog?.content.slice(0, 50)}....
+                    {hooksBlog?.content.slice(0, 50)}....
                     <span onClick={handlereadMore} className="readmoreIcon">
                       <i className="fas fa-angle-double-right"></i>
                       <i className="fas fa-angle-double-right"></i>
@@ -52,7 +52,7 @@ const Javascript = () => {
                   </Card.Text>
                 ) : (
                   <Card.Text style={{ color: "black" }}>
-                    {jsblog?.content} {""}
+                    {hooksBlog?.content} {""}
                     <span onClick={handlereadMore} className="readmoreIcon">
                       <i className="fas fa-chevron-circle-up"></i>
                       <i className="fas fa-chevron-circle-up"></i>
@@ -68,4 +68,4 @@ const Javascript = () => {
   );
 };
 
-export default Javascript;
+export default HooksBlogs;

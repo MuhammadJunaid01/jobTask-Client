@@ -7,6 +7,9 @@ import reactLogo from "../../images/logo/react.png";
 import hooks from "../../images/logo/hooks.png";
 import context from "../../images/logo/context.png";
 import Javascript from "./js/Javascript";
+import BlogsRe from "./js/blogsRe/BlogsRe";
+import HooksBlogs from "./hooksBlogs/HooksBlogs";
+import BlogsContext from "./blogsCOntext/BlogsContext";
 const Blogs = () => {
   let { path, url } = useRouteMatch();
 
@@ -57,6 +60,15 @@ const Blogs = () => {
               </Route>
               <Route path={`${path}/javascript`}>
                 <Javascript />
+              </Route>
+              <Route path={`${path}/react`}>
+                <BlogsRe />
+              </Route>
+              <Route path={`${path}/hooks`}>
+                <HooksBlogs />
+              </Route>
+              <Route path={`${path}/context`}>
+                <BlogsContext />
               </Route>
             </Switch>
           </Col>

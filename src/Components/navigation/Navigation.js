@@ -2,7 +2,9 @@ import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./navigation.css";
+import UseFirebase from "./../../hooks/usefirebase/UseFirebase";
 const Navigation = () => {
+  const { user, logOut } = UseFirebase();
   return (
     <div className="navigationContainer">
       <Navbar expand="lg">
@@ -17,7 +19,7 @@ const Navigation = () => {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
-              className="ms-auto my-2 my-lg-0"
+              className="ms-auto my-2 my-lg-0 d-flex align-items-center"
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
@@ -33,9 +35,23 @@ const Navigation = () => {
               <Link className="linkNav" to="/contact">
                 CONTACT
               </Link>
-              <Link className="linkNav" to="/login">
-                LOGIN
-              </Link>
+              {user?.email ? (
+                <Link onClick={logOut} className="linkNav" to="/login">
+                  LOGOUT
+                </Link>
+              ) : (
+                <Link className="linkNav" to="/login">
+                  LOGIN
+                </Link>
+              )}
+
+              {user?.email && (
+                <img
+                  style={{ height: "50px", width: "50px", borderRadius: "50%" }}
+                  src={user?.photoURL}
+                  alt=""
+                />
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
