@@ -21,9 +21,9 @@ const Javascript = () => {
         setLoader(false);
       });
   }, []);
-  const handlereadMore = () => {
+  const handlereadMore = (index) => {
     setReadMore((prevCheck) => !prevCheck);
-    console.log("more", readMore);
+    console.log("more", index);
   };
   return loader ? (
     <div className="loader">
@@ -37,7 +37,7 @@ const Javascript = () => {
         <h2>Learn Javascript With ARK</h2>
       </div>
       <Row className="g-3">
-        {jsBlogs.map((jsblog) => (
+        {jsBlogs.map((jsblog, index) => (
           <Col key={jsblog?._id} sm={12} md={4} lg={4}>
             <Card>
               <Card.Img
@@ -58,7 +58,10 @@ const Javascript = () => {
                 ) : (
                   <Card.Text style={{ color: "black" }}>
                     {jsblog?.content} {""}
-                    <span onClick={handlereadMore} className="readmoreIcon">
+                    <span
+                      onClick={() => handlereadMore(index)}
+                      className="readmoreIcon"
+                    >
                       <i className="fas fa-chevron-circle-up"></i>
                       <i className="fas fa-chevron-circle-up"></i>
                     </span>

@@ -38,3 +38,11 @@
   cursor: pointer;
   margin-right: 16px;
 }
+.commenshow {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 10px;
+  margin-bottom: 6px;
+}
+.cheacked {
+  display: none;
+}
