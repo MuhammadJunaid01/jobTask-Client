@@ -5,8 +5,8 @@
 <li>Implement Dynamic like and comment System</li>
 <li>Implement Admin Access Dash Board, and make admin system</li>
 <li>firebase authentication</li>
-<li>Mobaile Responsive</li>
-<li>React-Coustom Hooks</li>
+<li>Mobile Responsive</li>
+<li>React-Custom Hooks</li>
 
 <p>using technology</p>
 
