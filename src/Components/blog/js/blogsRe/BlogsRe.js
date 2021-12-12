@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Row, Spinner, Col, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const BlogsRe = () => {
   const [reactBlogs, setReactBlogs] = useState([]);
@@ -54,6 +55,11 @@ const BlogsRe = () => {
                     <span onClick={handlereadMore} className="readmoreIcon">
                       <i className="fas fa-chevron-circle-up"></i>
                       <i className="fas fa-chevron-circle-up"></i>
+                      <Link to={`/reactbloog/${reactBlog?._id}`}>
+                        <span className="commenbox">
+                          <i className="far fa-comment-alt"></i>
+                        </span>
+                      </Link>
                     </span>
                   </Card.Text>
                 )}

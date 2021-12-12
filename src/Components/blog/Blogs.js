@@ -23,7 +23,7 @@ const Blogs = () => {
                 <div className="nestedImage">
                   <img src={javascript} alt="" />
                 </div>
-                <Link className="nestedLink" to={`${url}/javascript`}>
+                <Link className="nestedLink" to={`${url}`}>
                   Javascript
                 </Link>
               </div>

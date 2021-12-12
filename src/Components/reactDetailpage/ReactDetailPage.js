@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
-import { Container, Card, Spinner } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "./commentbox.css";
+import UseFirebase from "./../../hooks/usefirebase/UseFirebase";
+import { Container } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import Swal from "sweetalert2";
 import ReactTooltip from "react-tooltip";
-import UseFirebase from "./../../hooks/usefirebase/UseFirebase";
-const CommentBox = () => {
+
+const ReactDetailPage = () => {
   const { id } = useParams();
   const [detail, setDetail] = useState();
   const [loader, setLoader] = useState(true);
@@ -22,7 +22,7 @@ const CommentBox = () => {
   //   commentId = findId.id;
   // });
   useEffect(() => {
-    fetch(`https://young-falls-28843.herokuapp.com/jsPost/${id}`)
+    fetch(`https://young-falls-28843.herokuapp.com/react/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setDetail(data);
@@ -102,14 +102,8 @@ const CommentBox = () => {
         setLike(data);
       });
   }, [counter]);
-  console.log("like ", like);
-  return loader ? (
-    <div className="loader">
-      <h1>
-        <Spinner animation="border" variant="warning" />
-      </h1>
-    </div>
-  ) : (
+  console.log("like ", counter);
+  return (
     <div>
       <Container>
         <Card>
@@ -183,4 +177,4 @@ const CommentBox = () => {
   );
 };
 
-export default CommentBox;
+export default ReactDetailPage;

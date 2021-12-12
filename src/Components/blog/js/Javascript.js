@@ -65,7 +65,7 @@ const Javascript = () => {
                       <i className="fas fa-chevron-circle-up"></i>
                       <i className="fas fa-chevron-circle-up"></i>
                     </span>
-                    <Link to={`coment/${jsblog?._id}`}>
+                    <Link to={`/coment/${jsblog?._id}`}>
                       <span className="commenbox">
                         <i className="far fa-comment-alt"></i>
                       </span>

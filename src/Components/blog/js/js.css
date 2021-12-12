@@ -15,7 +15,8 @@
 }
 .commenbox {
   font-size: 30px;
-  display: block;
+  /* display: block; */
   color: orange;
   cursor: pointer;
+  margin-left: 10px;
 }

@@ -17,7 +17,7 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 30px;
   border-radius: 20px;
-  width: 80%;
+  /* width: 80%; */
 }
 .userName {
   font-size: 30px;
@@ -39,10 +39,48 @@
   margin-right: 16px;
 }
 .commenshow {
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   padding: 10px;
   margin-bottom: 6px;
 }
-.cheacked {
-  display: none;
+.flex-formIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reaction {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid gray;
+  padding: 7px;
+  border-radius: 10px;
+}
+.commentIcon {
+  cursor: pointer;
+}
+.lkeIcon {
+  cursor: pointer;
+}
+.shareIcon {
+  cursor: pointer;
+}
+.reaction i {
+  font-size: 23px;
+}
+@media (min-width: 300px) and (max-width: 700px) {
+  .formFilled {
+    width: 100%;
+    padding: 0px;
+  }
+  .commentinput {
+    width: 100%;
+    padding: 0px;
+  }
+  .commentText {
+    width: 100%;
+    padding: 0px;
+  }
+  .commentinput {
+    width: 100%;
+    padding: 0px;
+  }
 }

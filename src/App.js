@@ -13,6 +13,7 @@ import Login from "./Components/login/Login";
 import Regester from "./Components/regester/Regester";
 import DashBoard from "./Components/dashboard/DashBoard";
 import CommentBox from "./Components/comment/CommentBox";
+import ReactDetailPage from "./Components/reactDetailpage/ReactDetailPage";
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
           </Route>
           <Route path="/coment/:id">
             <CommentBox />
+          </Route>
+          <Route path="/reactbloog/:id">
+            <ReactDetailPage />
           </Route>
         </Switch>
       </Router>
